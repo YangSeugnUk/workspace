@@ -10,14 +10,19 @@ public class TPC02 {
 		c=a+b; // 2
 		System.out.println(c);
 		
+		//기본자료형
 		float f; //float, double
 		f=34.5f;
 		
+		//기본자료형
 		char d;
 		d = 'A';
 		
+		//기본자료형
 		boolean g;
 		g=true;
+		
+				//Book bk;
 		
 		
 
