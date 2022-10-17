@@ -2,13 +2,13 @@
 public class TPC04 {
 
 	public static void main(String[] args) {
-		// 4. µ¥ÀÌÅÍ¸¦ ÀÌµ¿ÇÏ¶ó(º¯¼ö vs ¹è¿­)
+		// 4.ë°°ì—´ê³¼ ë³€ìˆ˜ì˜ ê´€ê³„
 		int a,b,c;
 		a=10;
 		b=20;
 		c=30;
 		
-		// a+b+c = ? ¸Ş¼­µå Ã³¸® -> hap()
+		// a+b+c = ? ë©”ì„œë“œì²˜ë¦¬ -> hap()
 		hap(a,b,c);
 		
 		int[] arr = new int[3];
