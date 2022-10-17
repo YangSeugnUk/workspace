@@ -1,24 +1,48 @@
 import kr.bit.Book;
+import kr.bit.PersonVO;
 
 public class TPC03 {
 
 	public static void main(String[] args) {
-		// ê´€ê³„ë¥¼ ì´í•´í•˜ë¼. PDT vs UDDT
-		// ê¸°ë³¸ìžë£Œí˜• (PDT) , ì‚¬ìš©ìžì •ì˜ìžë£Œí˜•(UDDT)
-		// ì •ìˆ˜ 1ê°œë¥¼ ì €ìž¥í•˜ê¸°ìœ„í•œ ë³€ìˆ˜ë¥¼ ì„ ì–¸í•˜ì‹œì˜¤.
+		// °ü°è¸¦ ÀÌÇØÇÏ¶ó. PDT vs UDDT
+		// ±âº»ÀÚ·áÇü (PDT) , »ç¿ëÀÚÁ¤ÀÇÀÚ·áÇü(UDDT)
+		// Á¤¼ö 1°³¸¦ ÀúÀåÇÏ±âÀ§ÇÑ º¯¼ö¸¦ ¼±¾ðÇÏ½Ã¿À.
 		
 		int a;
 		a=10;
 		
-		// ì±… 1ê¶Œì„ ì €ìž¥í•˜ê¸° ìœ„í•œ ë³€ìˆ˜ë¥¼ ì„ ì–¸í•˜ì‹œì˜¤.
-		// ì±…ì—ëŠ” ì œëª©, ê°€ê²©, ì¶œíŒì‚¬, íŽ˜ì´ì§€ìˆ˜, ISBN ë“± ì—¬ëŸ¬ê°€ì§€ê°€ ìžˆê³  ì„¤ì •í•´ì•¼í•œë‹¤.
-		// ê¸°ì–µê³µê°„ì„ ë¶„ë¦¬í•´ì„œ ì €ìž¥ì‹œì¼œì•¼ í•œë‹¤. ê°œë³„ì ìœ¼ë¡œ ì²˜ë¦¬í• ìˆœì—†ê³  ë¬¶ì–´ì„œ í•˜ë‚˜ì˜ í˜•íƒœë¡œ Bookì„ ë§Œë“¤ì–´ì•¼ í•œë‹¤.
-		// ì„¤ê³„ë¥¼ í•´ì¤˜ì•¼í•˜ëŠ”ë° ê·¸ê±¸ classë¼ê³  í•œë‹¤.
-		// kr.bit íŒ¨í‚¤ì§€ì—ë‹¤ Bookì´ë¼ëŠ” ë³€ìˆ˜(í´ë ˆìŠ¤)ë¥¼ ë§Œë“¤ì–´ì¤˜ì•¼ í•œë‹¤. (ì‚¬ìš©ìžì •ì˜ ìžë£Œí˜•)
-		// V(Variable) : ë³€ìˆ˜, ë©”ì„œë“œ
+		// Ã¥ 1±ÇÀ» ÀúÀåÇÏ±â À§ÇÑ º¯¼ö¸¦ ¼±¾ðÇÏ½Ã¿À.
+		// Ã¥¿¡´Â Á¦¸ñ, °¡°Ý, ÃâÆÇ»ç, ÆäÀÌÁö¼ö, ISBN µî ¿©·¯°¡Áö°¡ ÀÖ°í ¼³Á¤ÇØ¾ßÇÑ´Ù.
+		// ±â¾ï°ø°£À» ºÐ¸®ÇØ¼­ ÀúÀå½ÃÄÑ¾ß ÇÑ´Ù. °³º°ÀûÀ¸·Î Ã³¸®ÇÒ¼ø¾ø°í ¹­¾î¼­ ÇÏ³ªÀÇ ÇüÅÂ·Î BookÀ» ¸¸µé¾î¾ß ÇÑ´Ù.
+		// ¼³°è¸¦ ÇØÁà¾ßÇÏ´Âµ¥ ±×°É class¶ó°í ÇÑ´Ù.
+		// kr.bit ÆÐÅ°Áö¿¡´Ù BookÀÌ¶ó´Â º¯¼ö(Å¬·¹½º)¸¦ ¸¸µé¾îÁà¾ß ÇÑ´Ù. (»ç¿ëÀÚÁ¤ÀÇ ÀÚ·áÇü)
+		// V(Variable) : º¯¼ö, ¸Þ¼­µå
 		// D(DataType) : PDT, UDDT, array, class
-		// A(Assign)   : ëŒ€ìž…, í• ë‹¹
+		// A(Assign)   : ´ëÀÔ, ÇÒ´ç
+		
 		Book b;
+		// b´Â º¯¼öÀÎµ¥ º¯¼ö´Â µ¥ÀÌÅÍ 1°³¸¸ ÀúÀåÀ» ÇÒ ¼ö ÀÖ´Â°Å´Ù. ±×·³ Book¿¡´Â Á¦¸ñ, °¡°Ý... ÀÌ·±°ÍµéÀ» ³ÖÀ¸·Á¸é? °´Ã¼¸¦ »ý¼º!
+		b = new Book(); // °´Ã¼¸¦ »ý¼ºÇÏ´Ù.
+		b.title="ÀÚ¹Ù";
+		b.price=15000;
+		b.company="ÇÑºû¹Ìµð¾î";
+		b.page=700;
+		
+		System.out.println(b.title);
+		System.out.println(b.price);
+		
+		PersonVO p;
+		p = new PersonVO();
+		p.name = "¹Ú¸ÞÀÏ";
+		p.age = 40;
+		p.weight = 68.4f;
+		p.height = 175.7f;
+		
+		System.out.print(p.name + "\t");
+		System.out.print(p.age + "\t");
+		System.out.print(p.height + "\t");
+		
+		
 	}
 
 }
