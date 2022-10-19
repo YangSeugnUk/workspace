@@ -7,6 +7,14 @@ public class MemberVO {
 	public MemberVO() {
 		
 	}
+	
+	public MemberVO(String name, int age, String tel, String addr) {
+		this.name = name;
+		this.age = age;
+		this.tel = tel;
+		this.addr = addr;
+	}
+	
 	public String getName() {
 		return name;
 	}
@@ -31,4 +39,11 @@ public class MemberVO {
 	public void setAddr(String addr) {
 		this.addr = addr;
 	}
+
+	@Override
+	public String toString() {
+		return "MemberVO [name=" + name + ", age=" + age + ", tel=" + tel + ", addr=" + addr + "]";
+	}
+	
+	
 }
