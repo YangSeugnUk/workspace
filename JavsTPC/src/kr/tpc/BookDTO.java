@@ -9,4 +9,12 @@ public class BookDTO {
 	public BookDTO() {
 		// 객체를 생성하는 작업한다.
 	}
+
+	public BookDTO(String title, int price, String company, int page) {
+		this.title = title;
+		this.price = price;
+		this.company = company;
+		this.page = page;
+	}
+	
 }
