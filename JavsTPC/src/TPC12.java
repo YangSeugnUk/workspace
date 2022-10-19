@@ -12,7 +12,5 @@ public class TPC12 {
 		 //생성자 메서드의 중복정의(overloading)
 		 BookVO b3 = new BookVO("python", 18000, "daerim", 920);
 		 System.out.println(b3.company);
-		 
-		 
 	}
 }
