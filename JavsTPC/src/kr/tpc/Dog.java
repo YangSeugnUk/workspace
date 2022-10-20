@@ -5,4 +5,7 @@ public class Dog extends Animal{  // eat() { ? }
 	public void eat() {
 		System.out.println("dog eat");
 	}
+	public Dog() {
+		super(); // new Animal();
+	}
 }

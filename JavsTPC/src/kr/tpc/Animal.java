@@ -4,4 +4,8 @@ public class Animal {
 	public void eat() {
 		System.out.println("?");
 	}
+	
+	public Animal() {
+		super(); //new Object()
+	}
 }
